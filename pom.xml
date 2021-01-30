@@ -6,8 +6,14 @@
 
     <groupId>by.bsuir</groupId>
     <artifactId>parent_project</artifactId>
-    <version>1.4</version>
+    <version>1.5</version>
+
     <packaging>pom</packaging>
+
+    <modules>
+        <module>email_service_core</module>
+        <module>common_payload</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -55,6 +61,16 @@
     <dependencyManagement>
 
         <dependencies>
+
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>email_service_core</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>common_payload</artifactId>
+            </dependency>
+
 
             <!-- SPRING -->
 

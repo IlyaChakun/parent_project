@@ -6,8 +6,14 @@
 
     <groupId>by.bsuir</groupId>
     <artifactId>parent_project</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>common_services</module>
+        <module>common_services/core_email_service</module>
+        <module>common_services/common_payload</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -153,69 +159,6 @@
         </dependencies>
 
     </dependencyManagement>
-
-
-    <build>
-        <!--        <finalName>flower_shop_application</finalName>-->
-<!--        <pluginManagement>-->
-<!--            <plugins>-->
-<!--                <plugin>-->
-<!--                    <groupId>org.springframework.boot</groupId>-->
-<!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                    &lt;!&ndash;                    <configuration>&ndash;&gt;-->
-<!--                    &lt;!&ndash;                        <mainClass>${start-class}</mainClass>&ndash;&gt;-->
-<!--                    &lt;!&ndash;                    </configuration>&ndash;&gt;-->
-<!--                </plugin>-->
-<!--            </plugins>-->
-<!--        </pluginManagement>-->
-
-
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <source>${java.version}</source>-->
-<!--                    <target>${java.version}</target>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <artifactId>maven-deploy-plugin</artifactId>-->
-<!--                <version>2.8.2</version>-->
-<!--                <configuration>-->
-<!--                    <altDeploymentRepository>-->
-<!--                        internal.repo::default::file://${project.build.directory}/mvn-repo-->
-<!--                    </altDeploymentRepository>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
-<!--            <plugin>-->
-<!--                <groupId>com.github.github</groupId>-->
-<!--                <artifactId>site-maven-plugin</artifactId>-->
-<!--                <version>0.11</version>-->
-<!--                <configuration>-->
-<!--                    <message>Maven artifacts for ${project.version}</message>  &lt;!&ndash; git commit message &ndash;&gt;-->
-<!--                    <noJekyll>true</noJekyll>                                  &lt;!&ndash; disable webpage processing &ndash;&gt;-->
-<!--                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> &lt;!&ndash; matches distribution management repository url above &ndash;&gt;-->
-<!--                    <branch>refs/heads/mvn-repo</branch>                       &lt;!&ndash; remote branch name &ndash;&gt;-->
-<!--                    <includes><include>**/*</include></includes>-->
-<!--                    <repositoryName>parent_project</repositoryName>      &lt;!&ndash; github repo name &ndash;&gt;-->
-<!--                    <repositoryOwner>iChekun</repositoryOwner>    &lt;!&ndash; github username  &ndash;&gt;-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    &lt;!&ndash; run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase &ndash;&gt;-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            <goal>site</goal>-->
-<!--                        </goals>-->
-<!--                        <phase>deploy</phase>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-
-<!--        </plugins>-->
-
-
-    </build>
 
 
 </project>

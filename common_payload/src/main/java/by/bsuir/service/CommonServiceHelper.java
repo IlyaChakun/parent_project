@@ -26,7 +26,7 @@ public class CommonServiceHelper {
     private final CountryRepository countryRepository;
 
 
-    Country resolveCountry(CountryDTO countryDTO) {
+    public Country resolveCountry(CountryDTO countryDTO) {
         return countryRepository.findById(countryDTO.getId())
                 .orElseThrow(() -> {
                     logger.error("Country with id={} doesn't exist!", countryDTO.getId());
@@ -35,16 +35,16 @@ public class CommonServiceHelper {
     }
 
 
-    Pageable getPageable(int page, int size) {
+    public Pageable getPageable(int page, int size) {
 //        Sort sort = sortType.equalsIgnoreCase("ASC") ?
 //                Sort.by(sortBy).ascending() :
 //                Sort.by(sortBy).descending();
         return PageRequest.of(page, size);
     }
 
-    void checkIdOrThrowException(final Long id,
-                                 final String error,
-                                 final String message) {
+    public void checkIdOrThrowException(final Long id,
+                                        final String error,
+                                        final String message) {
         if (Objects.isNull(id)) {
             logger.error("Resolve error: type=" + error + ",  message= " + message + ",  resourceId= " + id);
             throw new ServiceException(HttpStatus.BAD_REQUEST.value(),

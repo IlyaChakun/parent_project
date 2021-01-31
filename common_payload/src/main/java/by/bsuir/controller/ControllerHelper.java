@@ -26,4 +26,5 @@ public final class ControllerHelper {
                     "The entity from UI came without Id!");
         }
     }
+
 }

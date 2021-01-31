@@ -23,6 +23,7 @@ public class CommonServiceHelper {
     private static final Logger logger = LoggerFactory.getLogger(CommonServiceHelper.class);
 
 
+
     private final CountryRepository countryRepository;
 
 
@@ -33,7 +34,6 @@ public class CommonServiceHelper {
                     throw new ResourceNotFoundException("Country with id=" + countryDTO.getId() + " not found!");
                 });
     }
-
 
     public Pageable getPageable(int page, int size) {
 //        Sort sort = sortType.equalsIgnoreCase("ASC") ?
@@ -52,4 +52,5 @@ public class CommonServiceHelper {
                     message);
         }
     }
+
 }

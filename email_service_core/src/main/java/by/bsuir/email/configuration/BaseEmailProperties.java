@@ -13,10 +13,10 @@ import org.springframework.stereotype.Component;
 public final class BaseEmailProperties {
 
     @Value("${spring.mail.username}")
-    public String emailSender;// = "warehouse_logistic_worker@inbox.ru";
+    public String emailSender;
     @Value("${spring.mail.host}")
-    public String smtpHost;// = "smtp.mail.ru";
+    public String smtpHost;
     @Value("${spring.mail.port}")
-    public int smtpPort;// = 587;
+    public int smtpPort;
 
 }
